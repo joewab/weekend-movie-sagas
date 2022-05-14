@@ -14,6 +14,10 @@ function MovieItem({movie}) {
             type: 'FETCH_MOVIE',
             payload: movie.id
         })
+        dispatch({
+            type: 'FETCH_GENRE',
+            payload: movie.id
+        })
         history.push('/details')
     }
     return (
