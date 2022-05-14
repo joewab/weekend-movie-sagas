@@ -17,7 +17,7 @@ function Details() {
         
         {movie && movie.map((movie) => {
             return(
-                <div>
+                <div key={movie.id}>
                 <img src={movie.poster} key={movie.id}/>
                 <p>{movie.description}</p>
                 <button onClick={goBack}>Back to movie list</button>

@@ -20,9 +20,7 @@ function App() {
         Details page
         <Route path="/details">
           <Details/>
-        </Route> */
-
-        /* Add Movie page
+        </Route>
       </Router>
     </div>
   );
