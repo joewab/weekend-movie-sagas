@@ -2,15 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css';
 import MovieItem from '../MovieItem/MovieItem';
-import {HashRouter as Router, Route} from 'react-router-dom';
-// import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
-
+import Grid from '@mui/material/Grid';
+import { Container } from '@material-ui/core';
 
 function MovieList() {
 
@@ -22,33 +15,19 @@ function MovieList() {
     }, []);
 
     return (
-        <ImageList sx={{ width: 400, height: 400 }}>
-          <ImageListItem key="Subheader" cols={3}>
-            <ListSubheader component="div">Movies!</ListSubheader>
-          </ImageListItem>
-          {movies.map((movie) => {
-              return(
-                <MovieItem key={movie.id} movie={movie}/>
-              )
-          }
-            
-          )}
-        </ImageList>
-      );
-
-    // return (
-    //     <main>
-    //         <h1>MovieList</h1>
-    //         <section className="movies">
-    //             {movies.map((movie) => {
-    //                 return (
-    //                     <MovieItem key={movie.id} movie={movie}/>
-    //                 );
-    //             })}
-    //         </section>
-    //     </main>
-
-    // );
+        <Container>
+        <Grid container spacing={2}>
+            {movies && movies.map((movie) => {
+                return (
+                    <Grid item xs={12} sm={6} md={4}>
+                    <MovieItem key={movie.id} movie={movie} />
+                    </Grid>
+                )
+            }
+            )}
+        </Grid>
+        </Container>
+    );
 }
 
 export default MovieList;

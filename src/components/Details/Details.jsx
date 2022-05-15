@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 function Details() {
@@ -13,7 +14,7 @@ function Details() {
     }
 
     return (
-        <>
+        <div className="details-page">
             <h1>Movie Details</h1>
 
             {movie && movie.map((movie) => {
@@ -21,7 +22,7 @@ function Details() {
                     <div key={movie.id}>
                         <img src={movie.poster} key={movie.id} />
                         <p>{movie.description}</p>
-                        <button onClick={goBack}>Back to movie list</button>
+                        <Button variant="contained" onClick={goBack}>Back to movie list</Button>
                     </div>
 
                 )
@@ -31,12 +32,14 @@ function Details() {
 
             })}
 
+            <h2>Genres:</h2>
+
             {genres && genres.map((genre) => {
                 return (
-                    <h1>this is the genre:{genre.name}</h1>
+                    <h4>{genre.name}</h4>
                 )
             })}
-        </>
+        </div>
 
     )
 
