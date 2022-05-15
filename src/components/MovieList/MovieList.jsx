@@ -16,10 +16,10 @@ function MovieList() {
 
     return (
         <Container>
-        <Grid container spacing={4}>
-            {movies.map((movie) => {
+        <Grid container spacing={2}>
+            {movies && movies.map((movie) => {
                 return (
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid item xs={12} sm={6} md={4}>
                     <MovieItem key={movie.id} movie={movie} />
                     </Grid>
                 )

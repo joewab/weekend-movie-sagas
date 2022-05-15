@@ -8,7 +8,7 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
 function App() {
   return (
     <div className="App">
-      <h1>These are movies 🤷‍♂️</h1>
+      <h1>For your viewing pleasure...</h1>
       <Router>       
         {/* <nav>
         <Link to="/">Home</Link>

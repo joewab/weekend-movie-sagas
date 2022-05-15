@@ -26,3 +26,16 @@
 #movie-poster{
   width: 50%;
 }
+
+body{
+
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+background: rgb(75,184,145);
+background: linear-gradient(180deg, rgba(75,184,145,0.6545211834733893) 0%, rgba(9,9,121,0.7497592787114846) 25%, rgba(77,9,121,0.640515581232493) 71%);
+
+}
+
+.details-page{
+  color: aliceblue;
+}
